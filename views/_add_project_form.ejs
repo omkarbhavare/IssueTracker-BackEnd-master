@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/css/add_project.css">
+
+<section class="" id="project-feed">
+   
+    <% if(locals.user){%>
+
+
+
+        <form class="" action="/project/create" id="new-project-form" method="post">
+            <input type="text" name="projectName" placeholder="Project Name">
+            <textarea name="description" id="" cols="30" rows="10" placeholder="Text..."></textarea>
+            <input type="text" name="auther" placeholder="Assignee">
+           
+            <input type="submit" id="addBtn" value="Post">
+           
+        </form>
+
+        <%} else{ %>
+            <h1>You have not Signed-In yet.</h1>
+        <%} %>
+</section>

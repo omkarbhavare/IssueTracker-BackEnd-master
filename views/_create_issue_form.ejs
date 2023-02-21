@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/css/create_issue_form.css">
+
+<div class="main">
+    <form action="/project/createIssue" method="post">
+        <div class="issue-details">
+        <input type="text" placeholder="Title" name="title" size="31"><br/>
+        <textarea name="description" id="" placeholder="Description" size="40" cols="90" rows="10"></textarea>
+
+    </div>
+
+
+        <div class="select">
+            <input class="form-check-input" name="labels" type="checkbox" value="Bug" id="bug" />
+           <input type="hidden" name="project" value="<%= open_projects._id %>" >
+            <label class="form-check-label" for="bug"> Bug </label><br /><input name="labels" class="form-check-input"
+                type="checkbox" value="UI Improvement" id="ui-improvement" />
+            <label class="form-check-label" for="ui-improvement">
+                UI Improvement </label><br /><input name="labels" class="form-check-input" type="checkbox"
+                value="Documentation" id="documentation" />
+            <label class="form-check-label" for="documentation">
+                Documentation </label><br /><input name="labels" class="form-check-input" type="checkbox"
+                value="Enhancement" id="enhancement" />
+            <label class="form-check-label" for="enhancement">
+                Enhancement </label><br /><input name="labels" class="form-check-input" type="checkbox"
+                value="Duplicate" id="duplicate" />
+            <label class="form-check-label" for="duplicate"> Duplicate </label>
+        </div>
+        <div class="lst">
+            <input type="text" name="author" placeholder="Author">
+            <button type="submit">Add New Bug</button>
+        </div>
+
+        
+    </form>
+</div>

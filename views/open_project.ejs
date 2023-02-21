@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a18fa9a70e.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/open_project.css">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+
+
+    <div id="container" >
+        <div class="data">
+            <p>Project Name:
+                <%= open_projects.projectName %>
+            </p>
+            <p>Assignee Name
+                <%= open_projects.auther %>
+            </p>
+
+            <p>
+                <%= open_projects.issue %>
+            </p>
+            <p> Project Description
+            <p>
+                <%= open_projects.description %>
+            </p>
+        </div>
+    </div>
+    <div class="filter-box">
+        
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Title"
+            title="Type in a name">
+    </div>
+
+</div>
+
+<section id="myUL" class="bug-list">
+    <% for (i of open_projects.issues){%>
+        <ul class="issues-list">
+            <li style="display: flex;">
+                <span>Title :</span>
+                <p>
+                    <%= i.title %>
+                </p>
+            </li>
+            <li style="display: flex;">
+                <span>Description :</span>
+                <p class="des">
+                    <%= i.description %>
+                </p>
+            </li>
+            <li style="display: flex;">
+                <span>Assignee :</span>
+                <p>
+                    <%= i.author %>
+                </p>
+            </li>
+            <li class="iss" style="display: flex;">
+                <span>Labels :</span>
+                <p id="lab" data-category=" <%=  i.labels %> ">
+                    <%= i.labels %>
+                </p>
+            </li>
+
+        </ul>
+        <%} %>
+
+
+</section>
+
+    
+    
+
+    <div class="container">
+
+        <div id="flip" class="title"><i class="fa-solid fa-plus">Create Issue</i></div>
+        <div id="panel" class="issue-form">
+
+            <%- include('_create_issue_form') %>
+
+        </div>
+
+
+
+    </div>
+
+    
+
+    <div>
+
+    </div>
+
+
+
+
+    <script src="/js/search_issue.js"></script>
+    <script src="/js/test_script.js"></script>
+    <script src="/js/test_script2.js"></script>
+    <script src="/js/add_project_dailoge.js"></script>
+    <script src="/js/show_all_pj.js"></script>
+
+</body>
+
+</html>

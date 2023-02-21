@@ -1,0 +1,69 @@
+.main{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.main form{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    align-items: center;
+
+}
+.main form>input{
+    width: 40%;
+    
+
+}
+.main form textarea{
+    width: 40%;
+}
+
+.issue-details{
+    display:block ;
+    text-align: center;
+}
+
+.select  {
+    
+    width: 80%;
+    padding: 1%;
+    display: block;
+    color: #e5eecc;
+}
+
+
+.lst{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 1%;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.lst>input{
+    padding: 1%;
+    margin: 1%;
+    width: 100%;
+}
+
+#isbtn{
+    width: 20%;
+
+    
+}
+
+#flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+  }
+  
+  #panel {
+    padding: 50px;
+    display: none;
+  }

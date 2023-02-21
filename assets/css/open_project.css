@@ -1,0 +1,39 @@
+body{
+    background-image: linear-gradient( circle 971px at -9.5% 0.3%,  rgba(61,67,74,1) 7.9%, rgba(19,21,24,0.99)54%);
+    font-weight: 400;
+
+}
+
+.container{
+    display: flex;
+}
+
+.data{
+    display:block;
+    color: aliceblue;
+    font-size: larger;
+   
+}
+
+.title{
+    height: fit-content;
+    position:absolute;
+}
+
+.issue-form{
+    height: fit-content;
+}
+
+.bug-list{
+    display: block;
+    width: fit-content;
+    padding-left: 3%;
+    color: whitesmoke;
+    margin: 0 2px;
+}
+
+.filter-box{
+    margin: 1px;
+    padding-left: 3%;
+    margin-bottom: 3px;
+}

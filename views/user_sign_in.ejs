@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a18fa9a70e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/sign_in.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <div class="container">
+
+
+        <form action="/users/create-session" method="post">
+            <input type="email" placeholder="Enter Email" name="email">
+
+            <input type="password" placeholder="Password" name="password" id="myInput">
+            <label>
+                <input type="checkbox" onclick="myFunction()"> Show Password
+            </label>
+
+            <input type="submit" value="Login" name="login" class="btn">
+
+
+        </form>
+        
+        <button>
+            <i class="fa-solid fa-g"></i>
+            <a href="/users/auth/google">Google Sign-In</a>
+        </button>
+
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
